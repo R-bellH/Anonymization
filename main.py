@@ -11,7 +11,6 @@ from sklearn.preprocessing import OneHotEncoder
 
 
 def linear_regression(X, y):
-    __name__='linear regression'
     # Split the data into train and test sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.1, random_state=42)
 
@@ -25,7 +24,6 @@ def linear_regression(X, y):
     return y_test, y_pred
 
 def random_forest(X, y):
-    __name__='random forest'
     # Split the data into train and test sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.1, random_state=42)
 

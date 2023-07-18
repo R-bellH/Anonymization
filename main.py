@@ -11,7 +11,7 @@ from sklearn.preprocessing import OneHotEncoder
 
 
 def linear_regression(X, y):
-    __name__='linear_regression'
+    __name__='linear regression'
     # Split the data into train and test sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.1, random_state=42)
 
@@ -25,7 +25,7 @@ def linear_regression(X, y):
     return y_test, y_pred
 
 def random_forest(X, y):
-    __name__='random_forest'
+    __name__='random forest'
     # Split the data into train and test sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.1, random_state=42)
 
@@ -39,7 +39,7 @@ def heart(k_list, model):
     print('heart')
     mses=[]
     for k in k_list:
-        path=rf"heart-disease-{k}-anonymized.csv"
+        path=rf"data\heart-disease-{k}-anonymized.csv"
         data = pd.read_csv(path)
         y = data["target"]
         X = data.drop("target", axis=1)
@@ -53,7 +53,7 @@ def adult(k_list, model):
     print("adult")
     mses = []
     for k in k_list:
-        path = rf"example-{k}-anonymized.csv"
+        path = rf"data\example-{k}-anonymized.csv"
         data = pd.read_csv(path,delimiter=';')
         data['salary-class']=data['salary-class'].map({'<=50K':0,'>50K':1})
         y = data["salary-class"]
